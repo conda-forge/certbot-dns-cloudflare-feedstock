@@ -1,6 +1,6 @@
 context:
   name: certbot-dns-cloudflare
-  version: "5.0.0"
+  version: "5.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 84c01b06b2b0055f1b551eb3c0bc82c0a275063207cf9ea7ddc1b67129c728a4
+  sha256: 6fea3d5e2c3db018f83bc074315a48588fb680c900f7fef3349eae6a2cfc4c6c
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-      - certbot_dns_cloudflare
+        - certbot_dns_cloudflare
       pip_check: true
       python_version: ${{ python_min }}.*
 
