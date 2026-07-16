@@ -24,7 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - acme >=${{ version }}
     - certbot >=${{ version }}
-    - cloudflare >=2.19,<2.20
+    - cloudflare >=4.0
 
 tests:
   - python:
